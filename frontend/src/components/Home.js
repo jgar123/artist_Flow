@@ -35,7 +35,7 @@ const Home = () => {
     // e.persist()
     const id = e.currentTarget.id
     const artist = e.currentTarget.title
-    axios.post('http://localhost:4000/api/recentsearch', {
+    axios.post('/api/recentsearch', {
       deezerId: id,
       name: artist
     })
@@ -45,7 +45,7 @@ const Home = () => {
 
 
   useEffect(() => {
-    axios.get('http://localhost:4000/api/recentsearch')
+    axios.get('/api/recentsearch')
       .then(res => {
         const recentSearchesDuplicates = res.data.reverse().slice(0, 10)
         const recentSearchesDedup = recentSearchesDuplicates.filter((v, i, a) => a.findIndex(t => JSON.stringify(t) === JSON.stringify(v)) === i)
