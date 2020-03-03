@@ -1,3 +1,5 @@
+// Credit to Mathias Bynens for implementing the Vincenty Distance in javascript below
+
 function toRad(n) {
   return n * Math.PI / 180
 }

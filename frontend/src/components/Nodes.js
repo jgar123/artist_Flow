@@ -21,15 +21,11 @@ const Nodes = (props) => {
     .colors(5)
 
   const [mainNode, setMainNode] = useState({})
-
   const [secondaryNodes, setSecondaryNodes] = useState([])
-  const [topTracks, setTopTracks] = useState([])
-
   const [thirdNode] = useState({
-
     array: []
-
   })
+  const [topTracks, setTopTracks] = useState([])
 
   const addToFavourites = useCallback(() => {
     if (Auth.isAuthorized()) {

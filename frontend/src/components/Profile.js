@@ -37,7 +37,6 @@ const Profile = () => {
     })
       .then(resp => {
         setArtists(resp.data.artists)
-
       })
   }, [singleArtist])
 
